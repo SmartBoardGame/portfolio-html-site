@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset = "utf-8" />
+    <title>Ivan Petrenko Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="shortcut icon" type="image/jpg" href="images/mySchoolBookPhotoFor2021.jpg"/>
+    
+</head>
+
+
+
+<body>
+    <div class="title-wrapper">
+        
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="index.html">Home</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <h1>Achievements</h1>
+                <div class="right-side">
+                    <div class="nav-link-wrapper">
+                        <a href="https://www.linkedin.com/in/IP-programer/">My linkedin</a>
+                    </div>
+
+                    <div class="brand">
+                        <div> Ivan Petrenko </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <a href="resume.html"><div class="portfolio-img-background" style="background-image:url(images/education.jpg)"> </div></a>        
+                    <div class="img-text-wrapper">
+                        
+                        <div class="subtitle">
+                            <div class="portofolio-link-wrapper">
+                                <a href="resume.html">Here is my resume, last updated: 5/01/2022. It lists my strengths and some achievements. Accompanied by some interesting documents.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <a href="ballGamePage.html"><div class="portfolio-img-background" style="background-image:url(images/ballSnipet.jpg)"></div></a> 
+                    <div class="img-text-wrapper">
+            
+                        <div class="subtitle">
+                            <div class="portofolio-link-wrapper">
+                                <a href="ballGamePage.html">Here  is  a  game  I  created  all  by  myself  using  c#  and  Unity  Engine  for  computers.  The game  is  not complex,  but  considering  I've  coded  it  in  less  than  3  months  from  scratch,  not  too  bad. Click this tile to look at it.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="portfolio-item-wrapper">
+                    <a href="contact.html"><div class="portfolio-img-background" style="background-image:url(images/websiteName.jpg)"></div></a>      
+                    <div class="img-text-wrapper">
+                        
+                        <div class="subtitle">
+                            <div class="portofolio-link-wrapper">
+                                <a href="contact.html">This entire website was created all by myself with the help of Google search engine and YouTube tutorials. I've learned basics of Css and Html coding. Click this tile to contact me :)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="portfolio-item-wrapper">
+                    <a href="pythonProjects.html"><div class="portfolio-img-background" style="background-image:url(images/binary_game_snip.JPG)"> </div>  </a>      
+                        <div class="img-text-wrapper">
+                        
+                        <div class="subtitle">
+                            <div class="portofolio-link-wrapper">
+                                <a href="pythonProjects.html">This is one of the projects I've coded for fun and to get the highest score in an online website video game. It earned me an exemption from the final in Networking class because my instructor found my Python script to be very creative and inspiring to other students. This is one of many projects using Python 3, click this tile to watch a video of me explaining this project in more detail.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="portfolio-item-wrapper">
+                    <a href="transcripts.html"><div class="portfolio-img-background" style="background-image:url(images/transcriptsImage.jpg)"></div></a>  
+                        <div class="img-text-wrapper">
+                            
+                            <div class="subtitle">
+                                <div class="portofolio-link-wrapper">
+                                    <a href="transcripts.html">This is a list of all the transcript(s) that I have accumulated over my educational career. Click this tile to view transcript(s) in greater detail. Last updated 10/30/2022.</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div class="portfolio-item-wrapper">
+                    <a href="about.html"><div class="portfolio-img-background" style="background-image:url(images/adaptable.jpg)"></div></a>  
+                        <div class="img-text-wrapper">
+                            
+                            <div class="subtitle">
+                                <div class="portofolio-link-wrapper">
+                                    <a href="about.html">Finally this tile will direct you to page about me, I can learn extremely quickly if given a task :)</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].querySelector('.portfolio-img-background').classList.add('img-darken');
+        })
+    })
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('click', () => {
+            
+            if (((portfolioItem .querySelector(".portfolio-img-background") .style .backgroundImage) == ('url("images/education.jpg")'))){
+                console.log("we clicked on resume")}
+
+            if (((portfolioItem .querySelector(".portfolio-img-background") .style .backgroundImage) == ('url("images/ballSnipet.jpg")'))){
+                console.log("we clicked on 3D ball game")}
+
+            if (((portfolioItem .querySelector(".portfolio-img-background") .style .backgroundImage) == ('url("images/websiteName.jpg")'))){
+                console.log("we clicked on this website: direct to contact page")}
+
+            if (((portfolioItem .querySelector(".portfolio-img-background") .style .backgroundImage) == ('url("images/clicker.jpg")'))){
+                console.log("we clicked on python projects")}
+
+            if (((portfolioItem .querySelector(".portfolio-img-background") .style .backgroundImage) == ('url("images/videoEditing.jpg")'))){
+                console.log("we clicked for some sample videos")}
+
+            if (((portfolioItem .querySelector(".portfolio-img-background") .style .backgroundImage) == ('url("images/adaptable.jpg")'))){
+                console.log("we clicked on our about page")}
+
+        })
+    })
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].querySelector('.portfolio-img-background').classList.remove('img-darken');
+          
+        })
+    })
+
+    const texts_lens = []
+    portfolioItems.forEach(portfolioItem =>
+    {
+    console.log(portfolioItem.childNodes[3].style);
+    length_tx = Math.round(portfolioItem.childNodes[3].innerText.length / 50);
+    console.log(length_tx )
+    if(length_tx == 1){
+        pass
+    }
+    else if(length_tx == 2){
+        (portfolioItem.childNodes[3].style.color = "red")
+    }
+    })
+</script>
+
+</html>
